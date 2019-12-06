@@ -41,7 +41,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests().antMatchers( "/api/register").permitAll();
+        http.cors().and().csrf().disable().authorizeRequests().antMatchers( "/api/register").permitAll();
         http.authorizeRequests()
                 .antMatchers( "/api/user-home/**").hasAuthority("USER")
                 .antMatchers("/api/teacher-home/**").hasAuthority("TEACHER")

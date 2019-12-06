@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
-@CrossOrigin(origins = "https://online-studying.herokuapp.com/", maxAge = 3600)
+@CrossOrigin(origins = "https://online-studying.herokuapp.com/")
 @RestController
 @RequestMapping(value = "/api/register", produces = MediaType.APPLICATION_JSON_VALUE)
 public class Register {
